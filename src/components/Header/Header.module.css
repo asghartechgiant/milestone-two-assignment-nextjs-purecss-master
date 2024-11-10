@@ -1,0 +1,96 @@
+.header {
+  display: flex;
+  justify-content: flex-end; /* Adjust to space between header items */
+  padding: 10px 40px;
+  height: 80px;
+  position: relative; /* Allows positioning of dropdown */
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.listStyle {
+  list-style: none;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+/* Mobile Menu */
+.menu {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+}
+
+/* Mobile Navigation Styles */
+.mobileNav {
+  height: 100vh; /* Full height */
+  width: 100vw; /* Full width */
+  background-color: rgba(0, 0, 0, .8); /* Background color */
+  color: white;
+  position: fixed; /* Fixed positioning */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  display: flex; /* Flexbox for alignment */
+  flex-direction: column; /* Stack items vertically */
+  padding: 20px; /* Padding for items */
+  z-index: 1000; /* Ensure it is above other elements */
+}
+.closeButton {
+  display: flex;
+  justify-content: flex-end; /* Align to the right */
+  padding: 10px; /* Add some padding */
+  cursor: pointer; /* Change cursor on hover */
+  color: black;
+}
+.mobileNav {
+  height: 100vh; /* Full height for the mobile menu */
+  width: 100vw; /* Full width for the mobile menu */
+  background-color: white; /* Background color for the menu */
+  position: fixed; /* Fixed positioning */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  z-index: 1000; /* Ensure it's on top of other elements */
+  padding: 20px; /* Add some padding */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.mobileNav > ul {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 10px; /* Space between items */
+  background-color: transparent; /* Remove background for the list */
+  color: black; /* Text color */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+.mobileNav > ul > li {
+  padding: 10px; /* Padding for list items */
+  border-radius: 5px; /* Rounded corners */
+  transition: background 0.3s; /* Smooth transition for hover effect */
+}
+
+.mobileNav > ul > li:hover {
+  background: rgb(176, 171, 171); /* Hover background color */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+
+/* Show mobile menu and hide nav items on smaller screens */
+@media (max-width: 600px) {
+  .nav {
+    display: none; /* Hide desktop nav on mobile */
+  }
+  .menu {
+    display: block; /* Show hamburger icon */
+    font-size: 30px; /* Adjust size */
+    position: absolute; /* Position relative to header */
+    top: 25%; /* Align to the top */
+    right: 40px; /* Align to the right */
+  }
+}

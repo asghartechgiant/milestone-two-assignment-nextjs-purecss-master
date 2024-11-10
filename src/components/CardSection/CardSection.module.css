@@ -1,0 +1,156 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 15px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #E0E0E0;
+  margin: 20px 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  -webkit-transition: transform 0.3s ease, box-shadow 0.3s ease;
+  -moz-transition: transform 0.3s ease, box-shadow 0.3s ease;
+  -ms-transition: transform 0.3s ease, box-shadow 0.3s ease;
+  -o-transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cards:hover {
+  transform: translateY(-5px); /* Slight hover lift */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow on hover */
+}
+
+.cardColumnOne {
+  grid-column: 1 / 5; /* Desktop default */
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative; /* Positioning context for the overlay */
+  transition: transform 0.3s ease;
+}
+
+.cardColumnOne img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.cardColumnOne img:hover {
+  transform: scale(1.05); /* Slight zoom on image hover */
+}
+
+/* Gradient overlay for images */
+.cardColumnOne::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(20, 40, 80, 0.3); /* Gradient overlay */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cardColumnOne:hover::after {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.cardColumnTwo {
+  grid-column: 5 / 12; /* Desktop default */
+}
+
+.cardColumnTwo h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.cardColumnTwo h2:hover {
+  color: #142850; /* Change color on hover */
+}
+
+.cardColumnTwo > div {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.cardColumnTwo > div > span:first-child {
+  background: #142850;
+  padding: 5px 15px;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 16px;
+}
+
+.cardColumnTwo > div > span:last-child {
+  color: var(--light);
+  font-size: 18px;
+}
+
+.cardColumnTwo p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Media Queries for Different Devices */
+
+/* Larger screens and desktops (1200px and above) */
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .cardColumnOne {
+    grid-column: 1 / 4; /* Wider first column */
+  }
+
+  .cardColumnTwo {
+    grid-column: 4 / 12; /* Wider second column */
+  }
+}
+
+/* Tablets (768px to 1199px) */
+@media (max-width: 1199px) {
+  .cards {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .cardColumnOne {
+    grid-column: 1 / 5; /* Adjusted for tablet */
+  }
+
+  .cardColumnTwo {
+    grid-column: 5 / 12; /* Adjusted for tablet */
+  }
+
+  .cardColumnTwo h2 {
+    font-size: 24px;
+  }
+
+  .cardColumnTwo p {
+    font-size: 14px;
+  }
+}
+
+/* Mobile screens (767px and below) */
+@media (max-width: 767px) {
+  .cards {
+    grid-template-columns: 1fr; /* Full width for mobile */
+  }
+
+  .cardColumnOne,
+  .cardColumnTwo {
+    grid-column: 1 / -1; /* Each item takes full width */
+  }
+
+  .cardColumnTwo h2 {
+    font-size: 20px;
+  }
+
+  .cardColumnTwo p {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,139 @@
+/* Add this to your RecentPost.module.css */
+
+.recentSection {
+  background: #edf7f9;
+  padding: 40px 0; /* Increased padding for more spacing */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+.recentSectionMain {
+  width: 75vw;
+  margin: 0 auto;
+}
+
+.recentTopSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center items vertically */
+  margin-bottom: 20px;
+}
+
+.recentTopSection > h2 {
+  font-size: 26px; /* Increased font size for better visibility */
+  font-weight: 600; /* Bolder font weight */
+  color: var(--primaryColor); /* Added color for heading */
+}
+
+.underlineLink {
+  text-decoration: underline;
+  color: var(--secondaryColor);
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease; /* Transition for color change */
+}
+
+.underlineLink:hover {
+  color: var(--hoverColor); /* Change color on hover */
+}
+
+.recentCardSection {
+  display: flex; /* Use Flexbox for responsiveness */
+  flex-wrap: wrap; /* Allow items to wrap */
+  gap: 20px; /* Space between items */
+}
+
+.recentCardSection > div {
+  flex: 1 1 calc(50% - 20px); /* Take up 50% of the width with spacing */
+  padding: 20px;
+  background-color: var(--white);
+  border-radius: 8px; /* Rounded corners for cards */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Card shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.recentCardSection > div:hover {
+  transform: translateY(-5px); /* Lift card on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.recentCardSection > div > h2 {
+  font-size: 24px; /* Reduced font size for better layout */
+  font-weight: bold;
+  color: var(--primaryColor); /* Color for card title */
+}
+
+.recentCardSection > div > .cardDetail > span {
+  font-size: 18px;
+  color: var(--secondaryColor); /* Color for card details */
+}
+
+.borderRight {
+  border-right: 1px solid var(--lightGray); /* Use a lighter color for the border */
+  padding-right: 30px;
+}
+
+.cardDetail {
+  display: flex;
+  gap: 30px;
+  margin: 15px 0;
+}
+
+.recentCardSection > div > p {
+  font-size: 16px;
+  font-weight: 500;
+  word-spacing: .1em;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+  .recentSectionMain {
+    width: 90vw; /* Increase width for mobile */
+  }
+
+  .recentTopSection > h2 {
+    font-size: 20px; /* Adjust heading size for mobile */
+  }
+
+  .underlineLink {
+    font-size: 14px; /* Adjust link size for mobile */
+  }
+
+  .recentCardSection > div {
+    flex: 1 1 100%; /* Take full width on mobile */
+    margin-bottom: 20px; /* Add margin for spacing */
+  }
+
+  .recentCardSection > div > h2 {
+    font-size: 20px; /* Reduce heading size for mobile */
+  }
+
+  .recentCardSection > div > .cardDetail > span {
+    font-size: 16px; /* Adjust font size for card details */
+  }
+
+  .recentCardSection > div > p {
+    font-size: 14px; /* Adjust paragraph size for mobile */
+  }
+}
+
+/* Desktop Devices */
+@media (min-width: 901px) {
+  .recentSectionMain {
+    width: 75vw; /* Original width */
+  }
+
+  .recentTopSection > h2 {
+    font-size: 26px; /* Original heading size */
+  }
+
+  .underlineLink {
+    font-size: 16px; /* Original link size */
+  }
+
+  .recentCardSection > div {
+    flex: 1 1 calc(50% - 20px); /* Original card width */
+  }
+}

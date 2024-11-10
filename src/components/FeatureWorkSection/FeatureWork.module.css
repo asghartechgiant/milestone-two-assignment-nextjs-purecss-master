@@ -1,0 +1,31 @@
+.featureWork {
+  width: 75vw;
+  margin: 40 auto !important; /* Centering the section */
+  padding: 20px; /* Added padding for better spacing */
+  background-color: #f9f9f9; /* Light background for contrast */
+  border-radius: 10px; /* Rounded corners for a softer look */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.featureWork > h2 {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 60px;
+  text-transform: capitalize;
+  color: #142850; /* Changed color for better readability */
+  margin-bottom: 20px; /* Space below the heading */
+  border-bottom: 2px solid #E0E0E0; /* Underline for the heading */
+  padding-bottom: 10px; /* Space between text and border */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .featureWork {
+    width: 90vw; /* Full width for smaller screens */
+  }
+
+  .featureWork > h2 {
+    font-size: 20px; /* Slightly smaller font size on smaller screens */
+    line-height: 50px; /* Adjust line height */
+  }
+}

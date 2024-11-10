@@ -1,0 +1,117 @@
+.recentSection {
+  background: #edf7f9;
+  padding: 20px 0;
+}
+
+.recentSectionMain {
+  width: 75vw; /* Set the width of the main section */
+  margin: 0 auto; /* Center the section */
+}
+
+.recentTopSection {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.recentTopSection > h2 {
+  font-size: 44px !important;
+  font-weight: bold;
+  color: #142850; /* Changed color for better readability */
+}
+
+.underlineLink {
+  text-decoration: underline;
+  color: var(--secondaryColor);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.recentCardSection {
+  display: flex; /* Use Flexbox */
+  flex-direction: column; /* Stack cards vertically */
+  gap: 20px; /* Space between cards */
+}
+
+.recentCardSection > div {
+  padding: 20px 30px;
+  background-color: var(--white);
+  width: 100%; /* Ensure the card takes full width */
+  box-sizing: border-box; /* Include padding in width calculations */
+  border-radius: 8px; /* Rounded corners for cards */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.recentCardSection > div > h2 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #333; /* Darker color for headings */
+}
+
+.recentCardSection > div > .cardDetail > span {
+  font-size: 18px;
+  color: #777; /* Lighter color for date and categories */
+}
+
+.borderRight {
+  border-right: 1px solid #ccc; /* Lighter border color for better contrast */
+  padding-right: 30px;
+}
+
+.cardDetail {
+  display: flex;
+  gap: 30px;
+  margin: 15px 0;
+}
+
+.recentCardSection > div > p {
+  font-size: 16px;
+  font-weight: 500;
+  word-spacing: 0.1em;
+  color: #555; /* Color for paragraph text */
+}
+
+/* Media Queries for Responsiveness */
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+  .recentSectionMain {
+    width: 90vw; /* Increase width for mobile */
+  }
+
+  .recentTopSection > h2 {
+    font-size: 24px; /* Adjust heading size for mobile */
+  }
+
+  .underlineLink {
+    font-size: 14px; /* Adjust link size for mobile */
+  }
+
+  .recentCardSection > div > h2 {
+    font-size: 22px; /* Reduce heading size for mobile */
+  }
+
+  .recentCardSection > div > .cardDetail > span {
+    font-size: 16px; /* Adjust font size for card details */
+  }
+
+  .recentCardSection > div > p {
+    font-size: 14px; /* Adjust paragraph size for mobile */
+  }
+}
+
+/* Desktop Devices */
+@media (min-width: 901px) {
+  .recentSectionMain {
+    width: 75vw; /* Original width */
+  }
+
+  .recentTopSection > h2 {
+    font-size: 44px; /* Original heading size */
+  }
+
+  .underlineLink {
+    font-size: 16px; /* Original link size */
+  }
+}

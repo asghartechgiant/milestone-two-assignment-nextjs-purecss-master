@@ -1,0 +1,10 @@
+.featureWork{
+  width: 75vw;
+  margin: 0px auto;
+}
+.featureWork > h2{
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 60px;
+  text-transform: capitalize;
+}
