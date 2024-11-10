@@ -9,8 +9,8 @@ const HeroSection = () => {
       {/* Content above the image for mobile view */}
       <div className={styles.heroSectionItems}>
         <h1 className={styles.mainHeading}>
-          Hi, I am Rehan,
-          <br /> FullStack Web Developer
+          Hi, I am Asghar,
+          <br /> Frontend Web Developer
         </h1>
         <p className={styles.mainParagraph}>
           Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
@@ -30,7 +30,7 @@ const HeroSection = () => {
       {/* Image will be on the right for desktop view */}
       <div className={`${styles.heroSectionItems} ${styles.imageContainer}`}>
         <Image
-          src={"/avatar.jpeg"}
+          src={"/main.jpg"}
           className={styles.heroImage}
           alt="hero image"
           width={400}
